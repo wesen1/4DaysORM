@@ -265,7 +265,7 @@ local Select = function(own_table)
                 own_table = self.own_table
             end
 
-            -- get current column 
+            -- get current column
             for _, column in pairs(own_table.__colnames) do
                 colname, colname_as = own_table:column(column.name)
                 table.insert(include, colname .. " AS " .. colname_as)
@@ -299,12 +299,12 @@ local Select = function(own_table)
                 for _, values in pairs(self._rules.columns.join) do
                     left_table = values[1]
                     right_table = values[2]
-                  
+
                     if not table.has_value(unique_tables, left_table) then
                         table.insert(unique_tables, left_table)
                         _select = _select .. ", " .. self:_build_including(left_table)
                     end
-                  
+
                     if not table.has_value(unique_tables, right_table) then
                         table.insert(unique_tables, right_table)
                         _select = _select .. ", " .. self:_build_including(right_table)
@@ -590,7 +590,7 @@ local Select = function(own_table)
         --------------------------------------------------------
 
         -- Return one value
-        first = function (self) 
+        first = function (self)
             self._rules.limit = 1
             local data = self:all()
 
