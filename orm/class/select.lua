@@ -292,7 +292,7 @@ local Select = function(own_table)
 
             -- Add join rules
             if table.getn(self._rules.columns.join) > 0 then
-                local unique_tables = {}
+                local unique_tables = { self.own_table }
                 local join_tables = {}
                 local left_table, right_table
 
