@@ -79,7 +79,7 @@ function Table.new(self, args)
 
     local Table_instance = {
         ------------------------------------------------
-        --             Table info varibles            --
+        --            Table info variables            --
         ------------------------------------------------
 
         -- SQL table name
@@ -195,7 +195,7 @@ function Table.new(self, args)
 
     _G.All_Tables[self.__tablename__] = Table_instance
 
-    -- Create ne table if need
+    -- Create new table if needed
     if DB.new then
         self:create_table(Table_instance)
     end

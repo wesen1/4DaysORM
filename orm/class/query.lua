@@ -112,7 +112,7 @@ function Query(own_table, data)
 
                     colname = "`" .. colname .. "`"
 
-                    -- TODO: save in corectly type
+                    -- TODO: save in correct type
                     if counter ~= 0 then
                         colname = ", " .. colname
                         value = ", " .. value

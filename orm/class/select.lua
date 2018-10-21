@@ -191,7 +191,7 @@ local Select = function(own_table)
             end
         end,
 
-        -- BUild join tables rules
+        -- Build join tables rules
         _build_join = function (self)
             local result_join = ""
             local unique_tables = {}
@@ -251,11 +251,11 @@ local Select = function(own_table)
             return result_join
         end,
 
-        -- String with includin data in select
+        -- String with including data in select
         --------------------------------------------
-        -- @own_table {table|nill} Table instance
+        -- @own_table {table|nil} Table instance
         --
-        -- @return {string} comma separeted fields
+        -- @return {string} comma separated fields
         --------------------------------------------
         _build_including = function (self, own_table)
             local include = {}
@@ -314,7 +314,7 @@ local Select = function(own_table)
                 join = self:_build_join()
             end
 
-            -- Check agregators in select
+            -- Check aggregators in select
             if table.getn(self._rules.columns.include) > 0 then
                 local aggregators = {}
                 local aggregator, as
